@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuickBite - Food Delivery</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        background: #0f172a;
+        color: white;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 50px;
+        background: rgba(0,0,0,0.6);
+        position: sticky;
+        top: 0;
+    }
+
+    header h1 {
+        color: #facc15;
+    }
+
+    nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: white;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #facc15;
+    }
+
+    /* Banner */
+    .banner {
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092');
+        background-size: cover;
+    }
+
+    .banner h2 {
+        font-size: 3rem;
+    }
+
+    .banner span {
+        color: #facc15;
+    }
+
+    .banner button {
+        margin-top: 20px;
+        padding: 12px 25px;
+        border: none;
+        background: #facc15;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    /* Sections */
+    section {
+        padding: 60px 50px;
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 30px;
+        color: #facc15;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background: #1e293b;
+        padding: 20px;
+        border-radius: 10px;
+        width: 250px;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+    /* Reviews */
+    .review {
+        background: #1e293b;
+        margin: 15px auto;
+        padding: 20px;
+        border-radius: 10px;
+        width: 60%;
+    }
+
+    /* Contact */
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: auto;
+    }
+
+    input, textarea {
+        margin: 10px 0;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    button.submit {
+        background: #facc15;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #020617;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>QuickBite</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="#areas">Service Areas</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Order</a>
+    </nav>
+</header>
+
+<!-- Banner -->
+<div class="banner">
+    <div>
+        <h2>Delicious Food <span>Delivered Fast</span></h2>
+        <p>Order from your favorite restaurants anytime, anywhere.</p>
+        <button onclick="scrollToOrder()">Order Now</button>
+    </div>
+</div>
+
+<!-- Features -->
+<section id="features">
+    <h2>Our Features</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Fast Delivery</h3>
+            <p>Get your food within 30 minutes.</p>
+        </div>
+        <div class="card">
+            <h3>Top Restaurants</h3>
+            <p>Wide range of cuisines and restaurants.</p>
+        </div>
+        <div class="card">
+            <h3>Easy Payment</h3>
+            <p>Secure and multiple payment options.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Service Areas -->
+<section id="areas">
+    <h2>Service Areas</h2>
+    <div class="cards">
+        <div class="card">Delhi</div>
+        <div class="card">Mumbai</div>
+        <div class="card">Bangalore</div>
+        <div class="card">Chandigarh</div>
+    </div>
+</section>
+
+<!-- Reviews -->
+<section id="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review">⭐️⭐️⭐️⭐️⭐️ "Amazing service and fast delivery!"</div>
+    <div class="review">⭐️⭐️⭐️⭐️ "Food was fresh and delicious."</div>
+    <div class="review">⭐️⭐️⭐️⭐️⭐️ "Best food delivery app ever!"</div>
+</section>
+
+<!-- Contact / Order -->
+<section id="contact">
+    <h2>Order / Contact</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="text" placeholder="Address" required>
+        <input type="text" placeholder="Food Item" required>
+        <textarea placeholder="Special Instructions"></textarea>
+        <button class="submit">Place Order</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 QuickBite | All Rights Reserved</p>
+</footer>
+
+<script>
+function scrollToOrder() {
+    document.getElementById("contact").scrollIntoView({behavior: "smooth"});
+}
+</script>
+
+</body>
+</html>
